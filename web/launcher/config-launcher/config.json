@@ -1,0 +1,13 @@
+{
+  "maintenance": false,
+  "maintenance_message": "Le server est en maintenance.<br>Merci de bien vouloir essayer ultérieurement.",
+  "online": true,
+  "client_id": "",
+  "game_version": "1.0",
+  "custom": false,
+  "verify": false,
+  "java": true,
+  "game_args": [],
+  "dataDirectory": ".minecraft",
+  "ignored": ["config.json"]
+}

@@ -1,0 +1,72 @@
+<div class="container-settings">
+    <div class="overlay">
+
+        <div class="settingsNavbtn">
+            <button class="settingsbtn accountsettings">Cuentas</button>
+            <button class="settingsbtn ramsettings">Ram</button>
+            <button class="settingsbtn javasettings">Java</button>
+            <button class="settingsbtn resolutionsettings">Resolucion</button>
+            <button class="settingsbtn launchersettings">Launcher</button>
+            <button class="settingsbtn settingsSave">Guardar</button>
+        </div>
+    </div>
+
+
+    <div class="tabsettings accountsettingstab">
+      <div class="accounts"></div>
+      <button class="add-account">Agregar Cuenta</button>
+    </div>
+
+
+
+
+    <div class="tabsettings ramsettinstab" style="display:none;">
+      <div class="slider"></div>
+      <div class="text-settings"><font color="white" face="Cascadia Code SemiBold">Define la cantidad de RAM asignada a tu juego, una cantidad mayor aumentará el rendimiento de tu juego.<br> Tenga en cuenta que debe evitar utilizarlo en exceso, ya que de lo contrario puede causar pérdidas de rendimiento con respecto a otras aplicaciones.
+        otras aplicaciones.
+        <br><br>
+        Indica la cantidad total de RAM asignada a tu juego. Se recomienda no superar el 50% de la cantidad total de RAM del PC para que funcione correctamente. Si su ordenador
+        tiene más de 8 GB de RAM, le recomendamos que asigne 3 GB. Si su ordenador tiene 4 GB o menos, no asigne más de 2 GB.<br><br>
+        Indica la cantidad mínima de RAM asignada al iniciar el juego. Se recomienda no poner más de 3GB para este valor. El valor típico es 1 GB.</font></div>
+    </div>
+
+
+
+
+    <div class="tabsettings javasettingstab" style="display:none;">
+        <input type="text" value="" class="path" disabled/>
+        <input type="button" value="Changer" class="path-button"/>
+        <input type="file" class="path-file" style="display:none;" accept="application/octet-stream"/>
+        <div class="text-settings"><font color="white" face="Cascadia Code SemiBold">El launcher utiliza una versión integrada de Java.<br> Esta versión está disponible en el directorio <span class="info-path"></span>.<br> Sin embargo, puedes especificar su propio ejecutable.</font></div>
+    </div>
+
+
+
+
+    <div class="tabsettings resolutionsettingstab" style="display:none;">
+        <div class="text-settings"><font color="white" face="Cascadia Code SemiBold">Cambia la resolución de tu juego al iniciar Minecraft.<br>
+        Establece una resolución personalizada o elige una de la lista según el tamaño de tu pantalla.<br>
+        También puedes hacer que Minecraft se inicie automáticamente en pantalla completa.</font></div>
+        <input type="text" class="width"/>
+        <input type="text" class="height"/>
+    </div>
+
+
+
+    <div class="tabsettings launchersettingstab" style="display:none;">
+        <div>
+          <input type="checkbox" class="NewsAutoRefreshSettings">
+          <label class=""><font color="white" face="Cascadia Code SemiBold">Actualice las noticias automáticamente.</font></label>
+        </div>
+
+        <div>
+          <input type="checkbox" class="StatusServerAutoRefreshSettings">
+          <label class=""><font color="white" face="Cascadia Code SemiBold">Actualizar automáticamente el estado del servidor.</font></label>
+        </div>
+
+        <div>
+          <input type="checkbox" class="CloseLauncherSettings">
+          <label class=""><font color="white" face="Cascadia Code SemiBold">Mantener abierto el lanzador tras iniciar el juego.</font></label>
+        </div>
+    </div>
+</div>
