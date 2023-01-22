@@ -51,7 +51,7 @@ document.querySelector(".play-btn").addEventListener("click", async () => {
         
         launch.on('progress', (DL, totDL) => {
             document.querySelector(".progress-bar").style.display = "block"
-            document.querySelector(".info-download").innerHTML = `Téléchargement ${((DL / totDL) * 100).toFixed(0)}%`
+            document.querySelector(".info-download").innerHTML = `Descargando ${((DL / totDL) * 100).toFixed(0)}%`
             document.querySelector(".progress-bar").value = DL;
             document.querySelector(".progress-bar").max = totDL;
         });
@@ -69,7 +69,7 @@ document.querySelector(".play-btn").addEventListener("click", async () => {
             if(config_launcher.Launcher.CloseLauncher === true){
                 win.hide();
             }
-            document.querySelector(".info-download").innerHTML = `Démarrage du jeu en cours`
+            document.querySelector(".info-download").innerHTML = `Inicio del juego en curso`
         })
         
         launch.on('close', (e) => {

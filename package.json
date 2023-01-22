@@ -1,6 +1,6 @@
 {
   "name": "PatoGea4-Launcher",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "productName": "PatoGea4 Launcher",
   "description": "PatoGea4 Fabric Launcher",
   "main": "src/index.html",

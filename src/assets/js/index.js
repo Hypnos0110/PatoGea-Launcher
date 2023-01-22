@@ -42,14 +42,14 @@ async function maintenanceCheck(){
     if (res.maintenance) return shutdown(res.maintenance_message);
     else checkUpdate();
   }).catch( err => {
-    console.log("impossible de charger le config.json");
+    console.log("no se puede cargar el config.json");
     console.log(err);
-    return shutdown("Aucune connexion internet détectée,<br>veuillez réessayer ultérieurement.");
+    return shutdown("No se ha detectado conexión a Internet,<br> inténtelo más tarde.");
   })
 }
 
 async function checkUpdate(){
-  setStatus(`Recherche de mises à jour`);
+  setStatus(`Buscar actualizaciones`);
   const manifest = await fetch(manifestUrl).then(res => res.json());
   const update = await updater.checkNewVersion(manifest);
   if(!update) return startLauncher();
@@ -62,9 +62,9 @@ async function checkUpdate(){
   });
 
   toggleProgress();
-  setStatus(`Téléchargement de la mise à jour`);
+  setStatus(`Descargar la actualización`);
   const file = await updater.download(manifest);
-  setStatus(`Décompression de la mise à jour`);
+  setStatus(`Descomprimir la actualización`);
   await updater.unpack(file);
   toggleProgress();
   setStatus(`Redémarrage`);
@@ -72,7 +72,7 @@ async function checkUpdate(){
 }
   
 function startLauncher(){
-  setStatus(`Démarrage du launcher`);
+  setStatus(`Iniciar el lanzador`);
   nw.Window.open("src/launcher.html", {
     "title": pkg.productName,
     "width": 1280,
@@ -87,7 +87,7 @@ function startLauncher(){
 }
 
 function shutdown(text){
-  setStatus(`${text}<br>Arrêt dans 5s`);
+  setStatus(`${text}<br>Parada en 5s`);
   let i = 4;
   setInterval(() => {
     setStatus(`${text}<br>Arrêt dans ${i--}s`);
